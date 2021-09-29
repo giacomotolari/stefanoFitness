@@ -1,0 +1,96 @@
+.Workout {
+  padding-top: 3%;
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.selectworkout {
+  background-color: #f0ecc9;
+  /* position: fixed;
+  z-index: 50; */
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: max-content;
+  margin-bottom: 5%;
+
+
+}
+.workoutSelectCategory,
+.workoutSelectLevel {
+  margin: 0 10% 0 0;
+  /* padding: 0.1% 2.2%; */
+  width: 10%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.workoutSelectCategory option,
+.workoutSelectLeveloption {
+  font-size: 1em;
+  font-weight: bold;
+}
+.workoutLabel {
+  color: #503d2e;
+  margin: 0 1% 0 0;
+}
+.workoutWrapper {
+  width: 26%;
+  height: 18%;
+  margin: 1% 1% 1% 1%;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+.workoutWrapper:hover {
+  z-index: 2;
+  transform: scale(1.4);
+}
+.workoutText {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5% 0;
+  border-bottom: 2px solid black;
+}
+.workoutTitle {
+  font-weight: bold;
+}
+.workoutLevel {
+  color: brown;
+  font-weight: bolder;
+}
+.workoutImage {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.workoutDescription {
+  display: none;
+  padding: 2%;
+  background-color: white;
+  color: black;
+  border-top: 1px solid black;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.workoutImage:hover ~ .workoutDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// #workoutsContainer{
+//   border:1px solid red;
+//   width: 100%;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-around;
+//   flex-wrap: wrap;
+// }

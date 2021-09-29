@@ -1,0 +1,27 @@
+.TrainingNav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #f0ecc9;
+  width: 60%;
+  margin-left: 20%;
+  /* position: fixed;
+  z-index: 50; */
+  .selected{
+    color: red;
+  }
+}
+.trainingnavList {
+  color: #503d2e;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: x-large;
+  font-weight: bolder;
+  text-transform: uppercase;
+  margin: 1.5%;
+}
+
+/* text-shadow: 2px 6px 3px #ce5937; */
+
+/* text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+   #ff2d95 0px 0px 20px, #ff2d95 0px 0px 30px, #ff2d95 0px 0px 40px,
+   #ff2d95 0px 0px 50px, #ff2d95 0px 0px 75px; */

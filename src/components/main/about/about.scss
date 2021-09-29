@@ -1,0 +1,37 @@
+.About {
+  width: 100%;
+  height: 100%;
+  padding: 10%;
+}
+.sectionAbout {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (max-width: 769px) {
+  .sectionAbout {
+    flex-direction: column;
+  }
+}
+.aboutText {
+  width: 50%;
+  height: 50%;
+}
+.aboutFoto {
+  width: 40%;
+  height: 90%;
+  border: 1px solid red;
+  margin: 5%;
+}
+.aboutButton {
+  position: relative;
+  bottom: 40%;
+  width: 15%;
+  height: 10%;
+  border: 1px solid red;
+  margin: 5%;
+  cursor: pointer;
+}

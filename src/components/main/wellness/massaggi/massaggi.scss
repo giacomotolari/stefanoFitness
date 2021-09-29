@@ -1,0 +1,82 @@
+.Massaggi {
+  padding-top: 2%;
+  max-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.selectmassaggi {
+  width: 80%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  height: max-content;
+}
+.massaggiSelectFascia,
+.massaggiSelectLevel {
+  margin: 0 10% 0 0;
+  padding: 0.1% 1.2%;
+  width: 10%;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.massaggiSelectFascia option,
+.massaggiSelectLeveloption {
+  font-size: 1em;
+  font-weight: bold;
+}
+.massaggiLabel {
+  color: #503d2e;
+  margin: 0 1% 0 0;
+}
+.massaggiWrapper {
+  width: 26%;
+  height: 18%;
+  margin: 1%;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+  background-color: white;
+  transition: all 0.4s ease-in-out;
+}
+.massaggiWrapper:hover {
+  z-index: 2;
+  transform: scale(1.7);
+}
+.massaggiText {
+  display: flex;
+  justify-content: space-around;
+  padding: 1.5% 0;
+  border-bottom: 2px solid black;
+}
+.massaggiTitle {
+  font-weight: bold;
+}
+.massaggiDifficulty {
+  color: brown;
+  font-weight: bolder;
+}
+.massaggiImage {
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.massaggiDescription {
+  display: none;
+  padding: 2%;
+  background-color: white;
+  color: black;
+  border-top: 1px solid black;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.massaggiImage:hover ~ .massaggiDescription {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@600&family=Fredericka+the+Great&display=swap');
+
+:root {
+  --main-white: #f0ecc9;
+  --main-black: #503d2e;
+  --main-bege: #e3a72f;
+  --main-blue: #058789;
+  --main-red: #d54b1a;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  /* font-family: 'Big Shoulders Stencil Display', cursive;
+  font-family: 'Fredericka the Great', cursive; */
+  font-family: 'sackbonesregular', 'Fredericka the Great',
+    'Big Shoulders Stencil Display', cursive;
+  src: url('./assets/webfontkit-20210731-073208/sackbones.woff2')
+      format('woff2'),
+    url('./assets/webfontkit-20210731-073208/sackbones.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+html {
+  /* background-color: red; */
+  background-color: #f0ecc9;
+
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+body {
+  /* background-color: black; */
+  background-color: #f0ecc9;
+  width: 100%;
+  min-height: 100%;
+}
+.App {
+  /* background-color: #f0ecc9; */
+  /* background-image: url('./assets/images/Logo\ .PNG'); */
+  width: 100%;
+  min-height: 100vh;
+  padding: 0.6% 0.6% 0.6% 1%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-evenly; */
+  
+}
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: blue orange;
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8vw;
+}
+
+/* *::-webkit-scrollbar-track {
+  background: orange;
+} */
+
+*::-webkit-scrollbar-thumb {
+  /* background-image: url('./assets/images/Logo\ .PNG'); */
+  background-image: url('./assets/images/barra.png');
+  background-image: url('./assets/images/ominoMilitaryPress.png');
+  background-image: url('./assets/images/ominoAnelli.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
