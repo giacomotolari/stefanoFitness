@@ -15,19 +15,19 @@ const Training = () => {
         <TrainingNav />
         <section className='trainingBody'>
           <Switch>
-            <Route path='/exercise'>
+            <Route path='/training/exercise'>
               <Exercise />
             </Route>
-            <Route path='/tabelle'>
+            <Route path='/training/tabelle'>
               <Tabelle />
             </Route>
-            <Route path='/'>
+            <Route exact path='/training'>
               <Workout />
             </Route>
           </Switch>
         </section>
       </div>
-  </Router>
+   </Router>
   );
 };
 

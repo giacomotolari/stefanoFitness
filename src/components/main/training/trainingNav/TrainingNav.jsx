@@ -6,7 +6,7 @@ const TrainingNav = () => {
     <ul className='TrainingNav'>
       <NavLink
         className='trainingnavList'
-        to='/'
+        to='/training'
         exact={true}
         activeClassName='selected'
       >
@@ -15,7 +15,7 @@ const TrainingNav = () => {
 
       <NavLink
         className='trainingnavList'
-        to='/tabelle'
+        to='/training/tabelle'
         activeClassName='selected'
       >
         <li>tabelle</li>
@@ -23,7 +23,7 @@ const TrainingNav = () => {
 
       <NavLink
         className='trainingnavList'
-        to='/exercise'
+        to='/training/exercise'
         activeClassName='selected'
       >
         <li>esercizi</li>
@@ -31,7 +31,7 @@ const TrainingNav = () => {
 
       <NavLink
         className='trainingnavList'
-        to='/appuntamenti'
+        to='/training/appuntamenti'
         activeClassName='selected'
       >
         <li>appuntamenti</li>
