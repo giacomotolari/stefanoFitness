@@ -1,23 +1,25 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import './wellnessNav.scss';
 
 const WellnessNav = () => {
   return (
     <ul className='WellnessNav'>
-      <Link className='wellnessnavList' to='/'>
+      <NavLink
+        className='wellnessnavList'
+        to='/wellness'
+        exact={true}
+        activeClassName='selected'
+      >
         <li>massaggi</li>
-      </Link>
+      </NavLink>
 
-      <Link className='wellnessnavList' to='/appuntamenti'>
+      <NavLink
+        className='wellnessnavList'
+        to='/wellness/appuntamenti'
+        activeClassName='selected'
+      >
         <li>appuntamenti</li>
-      </Link>
-      
-      {/* <Link className='wellnessnavList' to='/prezzi'>
-        <li>prezzi</li>
-      </Link> */}
-      {/* <Link className='wellnessnavList' to='/luoghi'>
-        <li>luoghi</li>
-      </Link> */}
+      </NavLink>
     </ul>
   );
 };

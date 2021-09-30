@@ -4,12 +4,16 @@
   align-items: center;
   font-weight: bolder;
   text-transform: uppercase;
+  .selected{
+    color: red;
+  }
 }
 .wellnessnavList {
   color: #503d2e;
   font-family: Arial, Helvetica, sans-serif;
   font-size: x-large;
   margin: 1.5%;
+
 }
 .wellnessnavInputContainer {
   display: flex;
