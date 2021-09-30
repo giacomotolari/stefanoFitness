@@ -5,6 +5,7 @@ import Workout from './workout/Workout';
 // import Workout from './workout/WorkoutWithFetch';
 import Exercise from './exercise/Exercise';
 import Tabelle from './tabelle/Tabelle';
+import Appuntamenti from './appuntamenti/Appuntamenti';
 
 const Training = () => {
   return (
@@ -16,6 +17,9 @@ const Training = () => {
         </Route>
         <Route path='/training/tabelle'>
           <Tabelle />
+        </Route>
+        <Route path='/training/appuntamenti'>
+          <Appuntamenti />
         </Route>
         <Route exact path='/training'>
           <Workout />
