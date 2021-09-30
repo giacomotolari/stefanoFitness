@@ -1,6 +1,5 @@
 import React,{ Switch, Route } from 'react-router-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-
 import './wellness.scss';
 import WellnessNav from './wellnessNav/WellnessNav';
 import Massaggi from './massaggi/Massaggi';

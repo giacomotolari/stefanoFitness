@@ -7,13 +7,16 @@ const Workout = () => {
   const [workoutCategory, setWorkoutCategory] = useState('');
   const [workoutSearch, setWorkoutSearch] = useState('');
 
-  (async () => {
-    const apiWorkouts =
-      'https://raw.githubusercontent.com/stefanofitness/fitnessWebPageData/main/workoutData.json';
-    const responseWorkouts = await fetch(apiWorkouts);
-    const dataWorkouts = await responseWorkouts.json();
-    setWorkouts(dataWorkouts);
-  })();
+  useEffect(() => {
+    (async () => {
+      const apiWorkouts =
+        'https://raw.githubusercontent.com/stefanofitness/fitnessWebPageData/main/workoutData.json';
+      const responseWorkouts = await fetch(apiWorkouts);
+      const dataWorkouts = await responseWorkouts.json();
+      setWorkouts(dataWorkouts);
+      console.log(dataWorkouts);
+    })();
+  }, []);
 
   useEffect(() => {
     const checkIfLevelIsOk = (workout) => {
@@ -48,18 +51,18 @@ const Workout = () => {
       return searchIsOk;
     };
     const filterWorkouts = () => {
-      setWorkouts((prevWorkouts) => [
-        ...prevWorkouts.filter((workout) => {
+      setWorkouts((n) =>
+        [...n].filter((workout) => {
           return (
             checkIfLevelIsOk(workout) &&
             checkIfCategoryIsOk(workout) &&
             checkIfSearchIsOk(workout)
           );
-        }),
-      ]);
+        })
+      );
     };
     filterWorkouts();
-  }, [workouts, workoutLevel, workoutCategory, workoutSearch]);
+  }, [workoutLevel, workoutCategory, workoutSearch]);
 
   const changeWorkoutLevel = (e) => {
     const level = parseInt(e.target.value);

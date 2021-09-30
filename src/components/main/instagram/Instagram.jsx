@@ -6,7 +6,7 @@ import instagramWellness from '../../../assets/images/instagramWellness.jpg';
 function Instagram() {
   return (
     <div className='Instagram'>
-      <h2>Dispongo di due account Instagram:</h2>
+      <h2>I miei due account Instagram:</h2>
       <section>
         <div className='instagramContainers'>
           {/* <a

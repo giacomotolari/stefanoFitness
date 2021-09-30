@@ -6,7 +6,7 @@ import facebookWellness from '../../../assets/images/facebookWellness.jpg';
 function Facebook() {
   return (
     <div className='Facebook'>
-      <h2>Dispongo di due account Facebook:</h2>
+      <h2>I miei due account Facebook:</h2>
       <section>
         <div className='facebookContainers'>
           {/* <a
