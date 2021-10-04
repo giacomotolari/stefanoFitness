@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import './workout.scss';
 
 const Workout = () => {
-  const [workouts, setWorkouts] = useState([]);
+  const [displayWorkouts, setDisplayWorkouts] = useState([]);
+  const [initialWorkouts, setInitialWorkouts] = useState([]);
   const [workoutLevel, setWorkoutLevel] = useState(0);
   const [workoutCategory, setWorkoutCategory] = useState('');
   const [workoutSearch, setWorkoutSearch] = useState('');
@@ -12,9 +13,9 @@ const Workout = () => {
       const apiWorkouts =
         'https://raw.githubusercontent.com/stefanofitness/fitnessWebPageData/main/workoutData.json';
       const responseWorkouts = await fetch(apiWorkouts);
-      const dataWorkouts = await responseWorkouts.json();
-      setWorkouts(dataWorkouts);
-      console.log(dataWorkouts);
+      const tempWorkouts = await responseWorkouts.json();
+      setInitialWorkouts(tempWorkouts);
+      console.log(tempWorkouts);
     })();
   }, []);
 
@@ -51,8 +52,8 @@ const Workout = () => {
       return searchIsOk;
     };
     const filterWorkouts = () => {
-      setWorkouts((n) =>
-        [...n].filter((workout) => {
+      setDisplayWorkouts(
+        initialWorkouts.filter((workout) => {
           return (
             checkIfLevelIsOk(workout) &&
             checkIfCategoryIsOk(workout) &&
@@ -62,7 +63,7 @@ const Workout = () => {
       );
     };
     filterWorkouts();
-  }, [workoutLevel, workoutCategory, workoutSearch]);
+  }, [initialWorkouts, workoutLevel, workoutCategory, workoutSearch]);
 
   const changeWorkoutLevel = (e) => {
     const level = parseInt(e.target.value);
@@ -122,7 +123,7 @@ const Workout = () => {
         </div>
       </div>
       {/* <div id="workoutsContainer"> */}
-      {workouts.map((workout, index) => (
+      {displayWorkouts.map((workout, index) => (
         <div key={index} className='workoutWrapper'>
           <div className='workoutText'>
             <h2 className='workoutTitle'>{workout.title}</h2>
