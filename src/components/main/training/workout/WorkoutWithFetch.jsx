@@ -15,7 +15,6 @@ const Workout = () => {
       const responseWorkouts = await fetch(apiWorkouts);
       const tempWorkouts = await responseWorkouts.json();
       setInitialWorkouts(tempWorkouts);
-      console.log(tempWorkouts);
     })();
   }, []);
 
@@ -77,6 +76,7 @@ const Workout = () => {
     const search = e.target.value;
     setWorkoutSearch(search);
   };
+
   return (
     <div className='Workout'>
       <div className='selectworkout'>
