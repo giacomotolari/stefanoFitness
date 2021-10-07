@@ -1,32 +1,44 @@
-import { useState } from 'react';
+import { useContext } from 'react';
+import { Context } from '../../../App';
 import './burgerMenu.scss';
 import { NavLink } from 'react-router-dom';
-// import facebook from '../../assets/icons/facebook.png';
-// import instagram from '../../assets/icons/instagram.png';
-// import youtube from '../../assets/icons/youtube.png';
-// import whatzapp from '../../assets/icons/whatzapp.png';
-// import mail from '../../assets/icons/mail.png';
-// import telefono from '../../assets/icons/telefono.png';
+import facebook from '../../../assets/icons/facebook.png';
+import instagram from '../../../assets/icons/instagram.png';
+import youtube from '../../../assets/icons/youtube.png';
+import whatzapp from '../../../assets/icons/whatzapp.png';
+import mail from '../../../assets/icons/mail.png';
+import telefono from '../../../assets/icons/telefono.png';
 
 function BurgerMenu() {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const { menuToogle, setMenuToogle } = useContext(Context);
+
   const handleToggle = () => {
-    setNavbarOpen((prev) => !prev);
+    setMenuToogle((prev) => !prev);
   };
 
   return (
     <>
       <div id='menuToggle'>
-        <input id='menuInput' type='checkbox' onClick={handleToggle} />
+        <input id='menuInput' onClick={handleToggle} />
 
-        <span></span>
-        <span></span>
-        <span></span>
+        <span
+          className={`${
+            menuToogle ? 'spansOpen firstSpanOpen' : 'firstSpanClose'
+          }`}
+        ></span>
+        <span
+          className={`${
+            menuToogle ? 'spansOpen secondSpanOpen' : 'secondSpanClose'
+          }`}
+        ></span>
+        <span
+          className={`${
+            menuToogle ? 'spansOpen thirdSpanOpen' : 'thirdSpanClose'
+          }`}
+        ></span>
 
-        {/* <button id='menuInput' onClick={handleToggle}>{navbarOpen ? "X" : "MENU"}</button> */}
-        {navbarOpen && (
+        {menuToogle && (
           <ul id='menu'>
-            {/* // <ul className={`menuNav ${navbarOpen ? " showMenu" : ""}`}> */}
             <li>
               <NavLink className='link-nav' to='/'>
                 <p onClick={handleToggle}>HOME</p>
@@ -58,6 +70,66 @@ function BurgerMenu() {
                 <p onClick={handleToggle}>CONTACT</p>
               </NavLink>
             </li>
+            <div className='iconsContainer'>
+          <div className='socialsContainer'>
+            <NavLink to='/facebook' activeClassName='selectedSocials'>
+              <img onClick={handleToggle}
+                className='contactIcon'
+                id='facebook'
+                src={facebook}
+                alt='facebook'
+              />
+            </NavLink>
+            <a
+              href='https://it-it.facebook.com/SalumificioArtigianaleMei/'
+              target='blank'
+            >
+              <img
+                className='contactIcon'
+                id='youtube'
+                src={youtube}
+                alt='youtube'
+              />
+            </a>
+            <NavLink to='/instagram' activeClassName='selectedSocials'>
+              <img onClick={handleToggle}
+                className='contactIcon'
+                id='instagram'
+                src={instagram}
+                alt='instagram'
+              />
+            </NavLink>
+          </div>
+          <div className='contactsContainer'>
+            <a
+              className='navLink'
+              href='https://wa.me/+393488733334'
+              target='blank'
+            >
+              <img
+                className='contactIcon'
+                id='whatzapp'
+                src={whatzapp}
+                alt='whatzapp'
+              />
+            </a>
+            <a
+              className='navLink'
+              href='mailto:sjmanca@gmail.com'
+              target='blank'
+            >
+              <img className='contactIcon' id='mail' src={mail} alt='mail' />
+            </a>
+            <a className='navLink' href='tel:+393488733334' target='blank'>
+              <img
+                className='contactIcon'
+                id='telefono'
+                src={telefono}
+                alt='telefono'
+              />
+            </a>
+          </div>
+          </div>
           </ul>
         )}
       </div>

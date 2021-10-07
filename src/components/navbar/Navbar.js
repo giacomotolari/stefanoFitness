@@ -1,5 +1,6 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import './navbar.scss';
+
 import { NavLink } from 'react-router-dom';
 import facebook from '../../assets/icons/facebook.png';
 import instagram from '../../assets/icons/instagram.png';
