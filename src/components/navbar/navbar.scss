@@ -1,65 +1,43 @@
 .Navbar {
-  /* border: 1px solid red; */
   background-color: #f0ecc9;
   width: 11%;
   min-height: 100%;
-}
-.navBar {
-  margin-left: 0.5%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  li {
-    padding: 12% 0;
-    .selected {
-      color: red;
+
+  .navBar {
+    margin-left: 0.5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    li {
+      padding: 12% 0;
+      .selected {
+        color: red;
+      }
     }
   }
-  .selectedSocials {
-    transform: scale(2.5);
-    margin: 8%;
+
+  @media only screen and (min-width: 768px) and (max-width: 1025px) {
+    .navBar {
+      margin-left: 1vw;
+    }
   }
-  .selectedSocials:hover {
-    transform: scale(1);
+  @media only screen and (max-width: 756px) {
+    .navBar {
+      display: none;
+    }
   }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 1025px) {
-  .navBar {
-    margin-left: 1vw;
-  }
-}
 @media only screen and (max-width: 756px) {
-  .navBar {
+  .NavBar {
     display: none;
   }
 }
 
-.link-nav {
-  text-shadow: 2px 2px 5px rgba(206, 89, 55, 0.77);
-  font-size: x-large;
-  font-weight: bold;
-  color: #503d2e;
-}
-.link-nav:hover {
-  text-shadow: 2px 2px 5px rgb(250, 67, 12);
-}
-
-@media only screen and (min-width: 768px) and (max-width: 1025px) {
-  p {
-    font-size: 18px;
-    font-weight: bold;
-  }
-}
-@media screen and (min-height: 1290px) and (max-height: 1380px) {
-  p {
-    font-size: 20px;
-    font-weight: bold;
-  }
-}
+// styles in common with burgerMenu
 
 .iconsContainer {
   width: 100%;
@@ -68,18 +46,40 @@
   justify-content: center;
   align-items: center;
   margin-top: 3%;
+  .contactsContainer,
+  .socialsContainer {
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2%;
+  }
+  @media only screen and (max-width: 756px) {
+    .contactsContainer,
+    .socialsContainer {
+      margin: 1.5%;
+      width: 20%;
+    }
+  }
+  .contactIcon {
+    width: clamp(1.5em, 1.5vw, 2.5em);
+  }
+
+  .contactIcon:hover {
+    transform: scale(2);
+  }
+
+  .selectedSocials {
+    transform: scale(2.5);
+    margin: 8%;
+  }
+  .selectedSocials:hover {
+    transform: scale(1);
+  }
 }
-.contactsContainer,
-.socialsContainer {
-  width: 90%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 2%;
-}
-.contactIcon {
-  width: 1.5vw;
-}
-.contactIcon:hover {
-  transform: scale(2);
+@media only screen and (max-width: 756px) {
+  .iconsContainer {
+    margin-right: 7.5%;
+    margin-top: 4%;
+  }
 }

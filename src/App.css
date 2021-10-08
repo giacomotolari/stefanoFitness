@@ -25,29 +25,27 @@ h6 {
   font-style: normal;
 }
 html {
-  /* background-color: red; */
   background-color: #f0ecc9;
-
   max-width: 100vw;
   min-height: 100vh;
 }
 
 body {
-  /* background-color: black; */
   background-color: #f0ecc9;
   width: 100%;
   min-height: 100%;
 }
 .App {
-  /* background-color: #f0ecc9; */
-  /* background-image: url('./assets/images/Logo\ .PNG'); */
   width: 100%;
   min-height: 100vh;
   padding: 0.6% 0.6% 0.6% 1%;
-  /* background-color: blue; */
   display: flex;
   flex-direction: row;
-  /* justify-content: space-evenly; */
+}
+@media only screen and (max-width: 756px) {
+  .App {
+    flex-direction: column;
+  }
 }
 /* Works on Firefox */
 * {
@@ -65,10 +63,18 @@ body {
 } */
 
 *::-webkit-scrollbar-thumb {
-  /* background-image: url('./assets/images/Logo\ .PNG'); */
-  background-image: url('./assets/images/barra.png');
-  background-image: url('./assets/images/ominoMilitaryPress.png');
   background-image: url('./assets/images/ominoAnelli.png');
   background-size: contain;
   background-repeat: no-repeat;
+}
+
+.link-nav {
+  text-shadow: 2px 2px 5px rgba(206, 89, 55, 0.77);
+  font-size: clamp(1em,2vw,1.5em);
+
+  font-weight: bold;
+  color: #503d2e;
+}
+.link-nav:hover {
+  text-shadow: 2px 2px 5px rgb(250, 67, 12);
 }
