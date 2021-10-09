@@ -1,4 +1,4 @@
-import './home.scss';
+import './home2.scss';
 import React, { Link } from 'react-router-dom';
 import video1 from './steEsibtítion.MOV';
 import video2 from './IMG_2249.mov';
@@ -11,58 +11,35 @@ function Home() {
     <div className='Home'>
       <section>
         <div className='trainerWrapper'>
-          {/* <img src={ClickHere} alt='' className='clickHereIcon' /> */}
           <div className='textWrapper'>
             <Link className='link-nav' to='/training'>
               <h2 className='textTitle'>ALLENATI CON STE</h2>
             </Link>
           </div>
           <Link className='link-nav' to='/training'>
-            <HoverVideoPlayer
-              videoSrc={video1}
-              className='videoBodySolution'
-              pausedOverlay={
-                <img
-                  src='thumbnail-image.jpg'
-                  alt=''
-                  style={
-                    {
-                      // Make the image expand to cover the video's dimensions
-                      // width: "100%",
-                      // height: "100%",
-                      // objectFit: "cover",
-                    }
-                  }
-                />
-              }
-              loadingOverlay={<div className='loading-spinner-overlay' />}
-            />
+            <HoverVideoPlayer videoSrc={video1} className='videoBodySolution' />
           </Link>
 
-          {/* <video className='trainerBackground' src={video1} autoPlay='true' /> */}
-
-          {/* FACEBOOK bodysolution*/}
-          <div className='socialIcons'>
+          <div className='instFbWrapper'>
             <a
               className='navLink'
               href='https://www.facebook.com/calisthenicscarbonianlf'
               target='blank'
             >
               <img
-                className='contactIcon'
-                id='facebook'
+                className='contactIconHome'
+                id='facebookHome'
                 src={facebook}
                 alt='facebook'
               />
             </a>
-            {/* INSTAGRAM     http://www.instagram.com/stemanca_bodysolution/ */}
             <a
               href='https://www.instagram.com/stemanca_bodysolution/'
               target='blank'
             >
               <img
-                className='contactIcon'
-                id='instagram'
+                className='contactIconHome'
+                id='instagramHOme'
                 src={instagram}
                 alt='instagram'
               />
@@ -85,34 +62,19 @@ function Home() {
             <HoverVideoPlayer
               videoSrc={video2}
               className='videoTrattamentoPsicofisico'
-              pausedOverlay={
-                <img
-                  src='thumbnail-image.jpg'
-                  alt=''
-                  style={
-                    {
-                      // Make the image expand to cover the video's dimensions
-                      // width: "100%",
-                      // height: "100%",
-                      // objectFit: "cover",
-                    }
-                  }
-                />
-              }
-              loadingOverlay={<div className='loading-spinner-overlay' />}
             />
           </Link>
 
           {/* FACEBOOK Psicofisico*/}
-          <div className='socialIcons'>
+          <div className='instFbWrapper'>
             <a
               className='navLink'
               href='https://www.facebook.com/stemanca'
               target='blank'
             >
               <img
-                className='contactIcon'
-                id='facebook'
+                className='contactIconHome'
+                id='facebookHome'
                 src={facebook}
                 alt='facebook'
               />
@@ -125,8 +87,8 @@ function Home() {
               target='blank'
             >
               <img
-                className='contactIcon'
-                id='instagram'
+                className='contactIconHome'
+                id='instagramHome'
                 src={instagram}
                 alt='instagram'
               />
