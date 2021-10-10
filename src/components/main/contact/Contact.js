@@ -34,7 +34,7 @@ export default function ContactUs() {
       ></iframe>
       <section>
         <form className='contact-form' onSubmit={sendEmail}>
-          <input type='text' placeholder='Nome' name='name' autoFocus/>
+          <input type='text' placeholder='Nome' name='name' />
           <input type='email' placeholder='Indirizzo Email' name='email' />
           <input
             type='text'

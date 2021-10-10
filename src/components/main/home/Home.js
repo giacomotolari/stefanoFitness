@@ -1,4 +1,4 @@
-import './home2.scss';
+import './home.scss';
 import React, { Link } from 'react-router-dom';
 import video1 from './steEsibtítion.MOV';
 import video2 from './IMG_2249.mov';
