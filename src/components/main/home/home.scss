@@ -76,31 +76,29 @@
         color: brown;
       }
     }
-   .video {
+    .video {
       max-width: 80vw;
       max-height: 30vh;
-      // height: clamp(10.5em, 35vh, 36em);
       -webkit-box-shadow: 5px 5px 15px 5px #000000;
       box-shadow: 5px 5px 15px 5px #000000;
     }
-    // @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    //   .video {
-    //     min-width: 74vw;
-    //   }
-    // }
-    // @media (max-height: 801px) and (min-width: 1024px) {
-    //   .video {
-    //     min-width: 38vw;
-    //     min-height: 38vw;
-    //     margin: 3%;
-    //   }
-    // }
-    // @media (min-height: 801px) and (min-width: 1024px) {
-    //   .video {
-    //     min-width: 38vw;
-    //     min-height: 63vh;
-    //   }
-    // }
+
+    @media (max-height: 801px) and (min-width: 1024px) {
+      .video {
+        max-width: 36vw;
+        min-height: 70vh;
+      }
+      .trainerWrapper,
+      .welnessWrapper {
+        margin: 0 4%;
+      }
+    }
+    @media (min-height: 801px) and (min-width: 1024px) {
+      .video {
+        min-width: 38vw;
+        min-height: 63vh;
+      }
+    }
     // video {
     //   min-width: 90vw;
     //   height: clamp(10.5em, 35vh, 36em);
@@ -145,13 +143,12 @@
   @media (max-height: 801px) and (min-width: 1024px) {
     section {
       flex-direction: row;
-      margin-left: -3%;
+      // justify-content: center;
     }
   }
   @media (min-height: 801px) and (min-width: 1024px) {
     section {
       flex-direction: row;
-      // margin-left: -3%;
     }
   }
 }

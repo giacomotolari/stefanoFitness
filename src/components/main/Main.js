@@ -1,4 +1,6 @@
 import './main.scss';
+import { useContext } from 'react';
+import { Context } from '../../App';
 import { Switch, Route } from 'react-router-dom';
 import Wellness from './wellness/Wellness';
 import Training from './training/Training';
@@ -9,8 +11,10 @@ import Facebook from './facebook/Facebook';
 import Instagram from './instagram/Instagram';
 
 function Main() {
+  const { menuToogle } = useContext(Context);
+
   return (
-    <div className='Main'>
+    <div className={`${menuToogle ? 'MainOff' : 'Main'}`}>
       <Switch>
         <Route path='/training'>
           <Training />

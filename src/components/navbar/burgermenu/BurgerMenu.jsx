@@ -8,6 +8,7 @@ import youtube from '../../../assets/icons/youtube.png';
 import whatzapp from '../../../assets/icons/whatzapp.png';
 import mail from '../../../assets/icons/mail.png';
 import telefono from '../../../assets/icons/telefono.png';
+import menuImage from '../../../assets/images/Logo.PNG'
 
 function BurgerMenu() {
   const { menuToogle, setMenuToogle } = useContext(Context);
@@ -44,6 +45,7 @@ function BurgerMenu() {
 
         {menuToogle && (
           <ul id='menu'>
+            <img className='menuImage' src={menuImage} alt={menuImage}/>
             <li>
               <NavLink
                 exact={true}

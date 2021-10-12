@@ -47,6 +47,7 @@ body {
     flex-direction: column;
   }
 }
+
 /* Works on Firefox */
 * {
   scrollbar-width: thin;
@@ -70,7 +71,7 @@ body {
 
 .link-nav {
   text-shadow: 2px 2px 5px rgba(206, 89, 55, 0.77);
-  font-size: clamp(1em,2vw,1.5em);
+  font-size: clamp(1em, 2vw, 1.5em);
 
   font-weight: bold;
   color: #503d2e;

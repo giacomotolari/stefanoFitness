@@ -70,16 +70,28 @@ span {
   justify-content: center;
   align-items: center;
   position: absolute;
+  top: 16vh;
   width: 100%;
-  height: 100vh;
-  background: #f0ecc9;
+  max-height: 100vh;
+  // background: #f0ecc9;
   list-style-type: none;
   -webkit-font-smoothing: antialiased;
   animation: animate 1s linear;
   animation-iteration-count: 1;
   animation-name: burgeMenuApparition;
   animation-timing-function: ease;
-  .selected{
+  .menuImage {
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: -30%;
+    left: 26%;
+  }
+
+  li {
+    padding: 5vh 9vw 0 0;
+  }
+  .selected {
     color: red;
   }
 }
@@ -92,8 +104,4 @@ span {
   100% {
     opacity: 1;
   }
-}
-
-#menu li {
-  padding: 5vh 9vw 0 0;
 }

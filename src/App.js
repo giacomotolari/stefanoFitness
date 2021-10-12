@@ -11,11 +11,8 @@ export const Context = React.createContext();
 function App() {
   const [menuToogle, setMenuToogle] = useState(false);
 
-
   return (
-    <Context.Provider
-      value={{ menuToogle, setMenuToogle}}
-    >
+    <Context.Provider value={{ menuToogle, setMenuToogle }}>
       <Router>
         <div className='App'>
           <Navbar />
