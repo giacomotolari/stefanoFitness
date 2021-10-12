@@ -15,6 +15,11 @@ function BurgerMenu() {
   const handleToggle = () => {
     setMenuToogle((prev) => !prev);
   };
+  // const handleToggle = () => {
+  //   if (window.innerWidth < 200) {
+  //     setMenuToogle((prev) => !prev);
+  //   }
+  // };
 
   return (
     <>

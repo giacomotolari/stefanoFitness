@@ -67,7 +67,7 @@ function Navbar() {
               />
             </NavLink>
             <a
-              href='https://it-it.facebook.com/SalumificioArtigianaleMei/'
+              href='https://www.youtube.com/channel/UC_eNHu_DFN4uxGsu_BP-AfA'
               target='blank'
             >
               <img

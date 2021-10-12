@@ -15,9 +15,10 @@ function Home() {
             </Link>
           </div>
           <ReactPlayer
-            autoPlay={true}
+            muted
+            playing={true}
             url='https://www.youtube.com/watch?v=KrbQhXfrkmE'
-            className='videoBodySolution'
+            className='video'
           />
           <div className='instFbWrapper'>
             <a
@@ -54,9 +55,11 @@ function Home() {
             </Link>
           </div>
           <ReactPlayer
+            muted
+            playing={true}
             url='https://www.youtube.com/watch?v=i4AeZpPkp-I'
             autoPlay={true}
-            className='videoTrattamentoPsicofisico'
+            className='video'
           />
           <div className='instFbWrapper'>
             <a
