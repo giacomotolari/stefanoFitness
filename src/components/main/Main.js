@@ -4,7 +4,7 @@ import Wellness from './wellness/Wellness';
 import Training from './training/Training';
 import Contact from './contact/Contact';
 import About from './about/About';
-import Home from './home/Home';
+import Home from './home/Home2';
 import Facebook from './facebook/Facebook';
 import Instagram from './instagram/Instagram';
 

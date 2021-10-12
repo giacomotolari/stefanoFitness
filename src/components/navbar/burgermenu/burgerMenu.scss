@@ -79,6 +79,9 @@ span {
   animation-iteration-count: 1;
   animation-name: burgeMenuApparition;
   animation-timing-function: ease;
+  .selected{
+    color: red;
+  }
 }
 @keyframes burgeMenuApparition {
   0% {

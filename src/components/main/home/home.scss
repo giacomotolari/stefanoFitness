@@ -24,7 +24,12 @@
       align-items: center;
       margin: 2% 0;
     }
-
+    @media (min-height: 801px) and (min-width: 1024px) {
+      .trainerWrapper,
+      .welnessWrapper {
+        margin: 0 2%;
+      }
+    }
     .textWrapper {
       display: flex;
       justify-content: center;
@@ -73,7 +78,6 @@
     }
 
     video {
-      // width: clamp(10.5em,30vw,20em);
       min-width: 90vw;
       height: clamp(10.5em, 35vh, 36em);
       -webkit-box-shadow: 5px 5px 15px 5px #000000;
@@ -95,7 +99,6 @@
       video {
         min-width: 38vw;
         min-height: 63vh;
-       
       }
     }
     .instFbWrapper {

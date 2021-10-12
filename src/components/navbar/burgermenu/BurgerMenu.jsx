@@ -40,96 +40,128 @@ function BurgerMenu() {
         {menuToogle && (
           <ul id='menu'>
             <li>
-              <NavLink className='link-nav' to='/'>
+              <NavLink
+                exact={true}
+                activeClassName='selected'
+                className='link-nav'
+                to='/'
+              >
                 <p onClick={handleToggle}>HOME</p>
               </NavLink>
             </li>
 
             <li>
-              <NavLink className='link-nav' to='/news'>
+              <NavLink
+                activeClassName='selected'
+                className='link-nav'
+                to='/news'
+              >
                 <p onClick={handleToggle}>NEWS</p>
               </NavLink>
             </li>
             <li>
-              <NavLink className='link-nav' to='/training'>
+              <NavLink
+                activeClassName='selected'
+                className='link-nav'
+                to='/training'
+              >
                 <p onClick={handleToggle}>TRAINING</p>
               </NavLink>
             </li>
             <li>
-              <NavLink className='link-nav' to='/welLness'>
+              <NavLink
+                activeClassName='selected'
+                className='link-nav'
+                to='/welLness'
+              >
                 <p onClick={handleToggle}>WELLNESS</p>
               </NavLink>
             </li>
             <li>
-              <NavLink className='link-nav' to='/about'>
+              <NavLink
+                activeClassName='selected'
+                className='link-nav'
+                to='/about'
+              >
                 <p onClick={handleToggle}>ABOUT</p>
               </NavLink>
             </li>
             <li>
-              <NavLink className='link-nav' to='/contact'>
+              <NavLink
+                activeClassName='selected'
+                className='link-nav'
+                to='/contact'
+              >
                 <p onClick={handleToggle}>CONTACT</p>
               </NavLink>
             </li>
             <div className='iconsContainer'>
-          <div className='socialsContainer'>
-            <NavLink to='/facebook' activeClassName='selectedSocials'>
-              <img onClick={handleToggle}
-                className='contactIcon'
-                id='facebook'
-                src={facebook}
-                alt='facebook'
-              />
-            </NavLink>
-            <a
-              href='https://it-it.facebook.com/SalumificioArtigianaleMei/'
-              target='blank'
-            >
-              <img
-                className='contactIcon'
-                id='youtube'
-                src={youtube}
-                alt='youtube'
-              />
-            </a>
-            <NavLink to='/instagram' activeClassName='selectedSocials'>
-              <img onClick={handleToggle}
-                className='contactIcon'
-                id='instagram'
-                src={instagram}
-                alt='instagram'
-              />
-            </NavLink>
-          </div>
-          <div className='contactsContainer'>
-            <a
-              className='navLink'
-              href='https://wa.me/+393488733334'
-              target='blank'
-            >
-              <img
-                className='contactIcon'
-                id='whatzapp'
-                src={whatzapp}
-                alt='whatzapp'
-              />
-            </a>
-            <a
-              className='navLink'
-              href='mailto:sjmanca@gmail.com'
-              target='blank'
-            >
-              <img className='contactIcon' id='mail' src={mail} alt='mail' />
-            </a>
-            <a className='navLink' href='tel:+393488733334' target='blank'>
-              <img
-                className='contactIcon'
-                id='telefono'
-                src={telefono}
-                alt='telefono'
-              />
-            </a>
-          </div>
-          </div>
+              <div className='socialsContainer'>
+                <NavLink to='/facebook'>
+                  <img
+                    onClick={handleToggle}
+                    className='contactIcon'
+                    id='facebook'
+                    src={facebook}
+                    alt='facebook'
+                  />
+                </NavLink>
+                <a
+                  href='https://it-it.facebook.com/SalumificioArtigianaleMei/'
+                  target='blank'
+                >
+                  <img
+                    className='contactIcon'
+                    id='youtube'
+                    src={youtube}
+                    alt='youtube'
+                  />
+                </a>
+                <NavLink to='/instagram'>
+                  <img
+                    onClick={handleToggle}
+                    className='contactIcon'
+                    id='instagram'
+                    src={instagram}
+                    alt='instagram'
+                  />
+                </NavLink>
+              </div>
+              <div className='contactsContainer'>
+                <a
+                  className='navLink'
+                  href='https://wa.me/+393488733334'
+                  target='blank'
+                >
+                  <img
+                    className='contactIcon'
+                    id='whatzapp'
+                    src={whatzapp}
+                    alt='whatzapp'
+                  />
+                </a>
+                <a
+                  className='navLink'
+                  href='mailto:sjmanca@gmail.com'
+                  target='blank'
+                >
+                  <img
+                    className='contactIcon'
+                    id='mail'
+                    src={mail}
+                    alt='mail'
+                  />
+                </a>
+                <a className='navLink' href='tel:+393488733334' target='blank'>
+                  <img
+                    className='contactIcon'
+                    id='telefono'
+                    src={telefono}
+                    alt='telefono'
+                  />
+                </a>
+              </div>
+            </div>
           </ul>
         )}
       </div>
