@@ -7,8 +7,11 @@ import Training from './training/Training';
 import Contact from './contact/Contact';
 import About from './about/About';
 import Home from './home/Home2';
-import Facebook from './facebook/Facebook';
-import Instagram from './instagram/Instagram';
+import Social from './socials/Social';
+import facebookTraining from '../../assets/images/facebookTraining.jpg';
+import facebookWellness from '../../assets/images/facebookWellness.jpg';
+import instagramTraining from '../../assets/images/instagramTraining.png';
+import instagramWellness from '../../assets/images/instagramWellness.jpg';
 
 function Main() {
   const { menuToogle } = useContext(Context);
@@ -29,10 +32,22 @@ function Main() {
           <Contact />
         </Route>
         <Route path='/facebook'>
-          <Facebook />
+          <Social
+            socialName='Facebook'
+            socialTrainingUrl='https://www.facebook.com/calisthenicscarbonianlf'
+            socialTrainingImg={facebookTraining}
+            socialWellnessUrl='https://www.facebook.com/stemanca'
+            socialWellnessImg={facebookWellness}
+          />
         </Route>
         <Route path='/instagram'>
-          <Instagram />
+          <Social
+            socialName='Instagram'
+            socialTrainingUrl='https://www.instagram.com/stemanca_bodysolution/'
+            socialTrainingImg={instagramTraining}
+            socialWellnessUrl='https://www.instagram.com/trattamento_psicofisico'
+            socialWellnessImg={instagramWellness}
+          />
         </Route>
         <Route exact path='/'>
           <Home />
