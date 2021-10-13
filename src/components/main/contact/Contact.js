@@ -27,11 +27,6 @@ export default function ContactUs() {
 
   return (
     <div className='Contact'>
-      <iframe
-        src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12370.613461177478!2d8.4998378!3d39.1826003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1023ed27ea0d037!2sParco%20Sportivo%20%22LA%20FENICE%22!5e0!3m2!1sen!2sde!4v1632483359620!5m2!1sen!2sde'
-        title='myFrame'
-        loading='lazy'
-      ></iframe>
       <section>
         <form className='contact-form' onSubmit={sendEmail}>
           <input type='text' placeholder='Nome' name='name' />
@@ -47,15 +42,20 @@ export default function ContactUs() {
         </form>
         <br />
         <br />
-        <div className='contactInfos'>
-          <a href='mailto:sjmanca@gmail.com' target='blank'>
-            <p>sjmanca@gmail.com</p>
-          </a>
-          <a href='tel:+393488733334' target='blank'>
-            <p>+393488733334</p>
-          </a>
-        </div>
       </section>
+      <iframe
+        src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12370.613461177478!2d8.4998378!3d39.1826003!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb1023ed27ea0d037!2sParco%20Sportivo%20%22LA%20FENICE%22!5e0!3m2!1sen!2sde!4v1632483359620!5m2!1sen!2sde'
+        title='myFrame'
+        loading='lazy'
+      ></iframe>
+      <div className='contactInfos'>
+        <a href='mailto:sjmanca@gmail.com' target='blank'>
+          <p>sjmanca@gmail.com</p>
+        </a>
+        <a href='tel:+393488733334' target='blank'>
+          <p>+393488733334</p>
+        </a>
+      </div>
     </div>
   );
 }
