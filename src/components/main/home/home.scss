@@ -109,6 +109,12 @@
         min-height: 53vh;
       }
     }
+    @media (height: 1024px) and (width: 1366px) {
+      .video {
+        max-width: 38vw;
+        min-height: 53vh;
+      }
+    }
 
     // video {
     //   min-width: 90vw;

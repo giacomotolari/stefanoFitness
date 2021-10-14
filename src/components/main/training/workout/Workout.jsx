@@ -7,10 +7,6 @@ const Workout = () => {
   const [workoutCategory, setWorkoutCategory] = useState('');
   const [workoutSearch, setWorkoutSearch] = useState('');
 
-  // window.addEventListener('scroll', () => {
-  //   const workoutContainerElement = document.querySelector('.WorkoutContainer0');
-  //   workoutContainerElement.classList.toggle('sticky', window.scrollY > 300);
-  // });
 
   useEffect(() => {
     const checkIfLevelIsOk = (workout) => {
@@ -120,7 +116,6 @@ const Workout = () => {
         // https://www.youtube.com/watch?v=ptdaPC2NADc&t=587s
 
         <div
-          // className={`'WorkoutContainer${index}' 'WorkoutContainer'`}
           className='WorkoutContainer'
           data-aos='flip-up'
           ata-aos-easing='ease-out-cubic'
