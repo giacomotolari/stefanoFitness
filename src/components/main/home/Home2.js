@@ -19,6 +19,7 @@ function Home() {
             playing={true}
             url='https://www.youtube.com/watch?v=KrbQhXfrkmE'
             className='video'
+            data-aos='fade-right'
           />
           <div className='instFbWrapper'>
             <a
@@ -60,6 +61,7 @@ function Home() {
             url='https://www.youtube.com/watch?v=i4AeZpPkp-I'
             autoPlay={true}
             className='video'
+            data-aos='fade-left'
           />
           <div className='instFbWrapper'>
             <a

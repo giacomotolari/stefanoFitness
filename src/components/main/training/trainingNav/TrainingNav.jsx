@@ -1,7 +1,14 @@
 import { NavLink } from 'react-router-dom';
 import './trainingNav.scss';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
+AOS.init();
 const TrainingNav = () => {
+  window.addEventListener('scroll', () => {
+    const trainingsnavElement = document.querySelector('.TrainingNav');
+    trainingsnavElement.classList.toggle('sticky', window.scrollY > 0);
+  });
   return (
     <ul className='TrainingNav'>
       <NavLink

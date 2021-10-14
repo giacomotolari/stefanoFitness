@@ -4,26 +4,17 @@
   display: flex;
   flex-direction: column;
   padding-bottom: 15%;
-}
-.trainingNav {
-  width: 100%;
-  height: 10%;
-  /* border: 1px solid black; */
-}
 
-.trainingSearch {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 3%;
-}
+  .trainingSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 3%;
+  }
 
-.search {
-  font-weight: bolder;
-  padding: 1%;
-}
-
-.searchInput{
-  width: 50%;
-  margin-left: 3%;
+  .searchInput {
+    width: 50%;
+    margin-left: 3%;
+    font-weight: bolder;
+  }
 }

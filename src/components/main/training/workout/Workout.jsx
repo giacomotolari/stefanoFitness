@@ -6,7 +6,7 @@ const Workout = () => {
   const [workoutLevel, setWorkoutLevel] = useState(0);
   const [workoutCategory, setWorkoutCategory] = useState('');
   const [workoutSearch, setWorkoutSearch] = useState('');
-  
+
   useEffect(() => {
     const checkIfLevelIsOk = (workout) => {
       let levelIsOk = true;
@@ -99,7 +99,7 @@ const Workout = () => {
           <option value='3'>3</option>
         </select>
         <div className='trainingSearch'>
-          <label htmlFor=''>cerca per nome</label>
+          <label htmlFor=''>CERCA PER NOME</label>
           <input
             className='searchInput'
             onChange={(e) => changeWorkoutSearch(e)}
@@ -111,7 +111,14 @@ const Workout = () => {
         </div>
       </div>
       {/* <div id="workoutsContainer"> */}
-        {workouts.map((workout, index) => (
+      {workouts.map((workout, index) => (
+        // https://www.youtube.com/watch?v=ptdaPC2NADc&t=587s
+        <div
+          className='WorkoutContainer'
+          data-aos='flip-up'
+          ata-aos-easing='ease-out-cubic'
+          data-aos-duration='2000'
+        >
           <div key={index} className='workoutWrapper'>
             <div className='workoutText'>
               <h2 className='workoutTitle'>{workout.title}</h2>
@@ -125,7 +132,8 @@ const Workout = () => {
             />
             <p className='workoutDescription'>{workout.description}</p>
           </div>
-        ))}
+        </div>
+      ))}
       {/* </div> */}
     </div>
   );

@@ -7,6 +7,9 @@
   --main-blue: #058789;
   --main-red: #d54b1a;
 }
+* {
+  box-sizing: border-box;
+}
 p,
 h1,
 h2,

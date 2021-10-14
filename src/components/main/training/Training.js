@@ -2,7 +2,7 @@ import { Route } from 'react-router-dom';
 import './training.scss';
 import TrainingNav from './trainingNav/TrainingNav';
 // import Workout from './workout/Workout';
-import Workout from './workout/WorkoutWithFetch';
+import Workout from './workout/Workout';
 import Exercise from './exercise/Exercise';
 import Tabelle from './tabelle/Tabelle';
 import Appuntamenti from './appuntamenti/Appuntamenti';
