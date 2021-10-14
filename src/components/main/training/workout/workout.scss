@@ -41,6 +41,10 @@
   height: 18%;
   margin: 2vw;
 }
+// #WorkoutContainer0.sticky {
+//   opacity: 0;
+// }
+
 .workoutWrapper {
   -webkit-box-shadow: 5px 5px 15px 5px #000000;
   box-shadow: 5px 5px 15px 5px #000000;
@@ -51,7 +55,7 @@
 .workoutWrapper:hover {
   z-index: 2;
   transform: scale(1.4);
-  margin: 1vw
+  margin: 1vw;
 }
 .workoutText {
   display: flex;
