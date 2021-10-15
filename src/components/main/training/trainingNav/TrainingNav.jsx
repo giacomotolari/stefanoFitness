@@ -7,7 +7,7 @@ AOS.init();
 const TrainingNav = () => {
   window.addEventListener('scroll', () => {
     const trainingsnavElement = document.querySelector('.TrainingNav');
-    trainingsnavElement.classList.toggle('sticky', window.scrollY > 50);
+    trainingsnavElement.classList.toggle('sticky', window.scrollY > 0);
   });
   return (
     <ul className='TrainingNav'>

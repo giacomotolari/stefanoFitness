@@ -7,6 +7,10 @@ const Workout = () => {
   const [workoutCategory, setWorkoutCategory] = useState('');
   const [workoutSearch, setWorkoutSearch] = useState('');
 
+  window.addEventListener('scroll', () => {
+    const selectWorkoutElement = document.querySelector('.selectworkout');
+    selectWorkoutElement.classList.toggle('sticky', window.scrollY > 0);
+  });
 
   useEffect(() => {
     const checkIfLevelIsOk = (workout) => {
@@ -117,9 +121,10 @@ const Workout = () => {
 
         <div
           className='WorkoutContainer'
-          data-aos='flip-up'
+          data-aos='flip-down'
           ata-aos-easing='ease-out-cubic'
           data-aos-duration='2000'
+          aria-haspopup='true'
         >
           <div key={index} className='workoutWrapper'>
             <div className='workoutText'>
