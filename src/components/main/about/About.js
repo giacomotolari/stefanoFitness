@@ -3,11 +3,10 @@ import './about.scss';
 function About() {
   return (
     <div className='About'>
-      <h1>STEFANO MANCA</h1>
       <section className='sectionAbout'>
         <p className='aboutText'>
-          Mi chiamo Stefano Manca e lavoro come personal trainer, insegnante di
-          Calisthenics e massaggiatore.
+          Mi chiamo <small>Stefano Manca</small> e lavoro come personal trainer,
+          insegnante di Calisthenics e massaggiatore.
           <br />
           <br />
           Sono esperto del movimento, della cura e benessere del corpo: il mio
