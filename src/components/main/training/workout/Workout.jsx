@@ -1,12 +1,21 @@
 import { useState, useEffect } from 'react';
 import './workout.scss';
-import initialWorkouts from './workoutData';
 const Workout = () => {
-  const [workouts, setWorkouts] = useState(initialWorkouts);
+  
   const [workoutLevel, setWorkoutLevel] = useState(0);
   const [workoutCategory, setWorkoutCategory] = useState('');
   const [workoutSearch, setWorkoutSearch] = useState('');
+  const [initialWorkouts, setInitalWorkouts] = useState([]);
+  const [workouts, setWorkouts] = useState(initialWorkouts);
 
+  useEffect(() => {
+    (async () => {
+      let response = await fetch('https://raw.githubusercontent.com/stefanofitness/fitnessWebPageData/main/workoutData.json');
+      response = await response.json();
+      setInitalWorkouts(response);
+    }
+    )();
+  }, []);
   window.addEventListener('scroll', () => {
     const selectWorkoutElement = document.querySelector('.selectworkout');
     selectWorkoutElement.classList.toggle('sticky', window.scrollY > 0);
@@ -56,7 +65,7 @@ const Workout = () => {
       );
     };
     filterWorkouts();
-  }, [workoutLevel, workoutCategory, workoutSearch]);
+  }, [workoutLevel, workoutCategory, workoutSearch,initialWorkouts]);
 
   const changeWorkoutLevel = (e) => {
     const level = parseInt(e.target.value);
@@ -134,8 +143,8 @@ const Workout = () => {
             </div>
             <img
               className='workoutImage'
-              src={workout.image}
-              alt={workout.imageAlt}
+              src={workout.video}
+              alt={workout.videoAlt}
             />
             <p className='workoutDescription'>{workout.description}</p>
           </div>

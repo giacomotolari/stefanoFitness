@@ -25,15 +25,10 @@
     }
   }
   @media only screen and (max-width: 756px) {
-    .navBar {
+    .navBar,
+    .NavBar {
       display: none;
     }
-  }
-}
-
-@media only screen and (max-width: 756px) {
-  .NavBar {
-    display: none;
   }
 }
 
