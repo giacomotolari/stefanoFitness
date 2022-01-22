@@ -16,6 +16,7 @@ const Workout = () => {
     }
     )();
   }, []);
+  
   window.addEventListener('scroll', () => {
     const selectWorkoutElement = document.querySelector('.selectworkout');
     selectWorkoutElement.classList.toggle('sticky', window.scrollY > 0);

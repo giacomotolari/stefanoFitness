@@ -1,11 +1,24 @@
-import { useState, useEffect } from 'react';
-import './exercise.scss';
-import initialexercises from './exerciseData';
+import { useState, useEffect } from "react";
+import ReactPlayer from "react-player";
+import "./exercise.scss";
+import initialexercises from "./exerciseData";
 const Exercise = () => {
-  const [exercises, setExercises] = useState(initialexercises);
   const [exerciseLevel, setexErciseLevel] = useState(0);
-  const [exerciseCategory, setExerciseCategory] = useState('');
-  const [exerciseSearch, setExerciseSearch] = useState('');
+  const [exerciseCategory, setExerciseCategory] = useState("");
+  const [exerciseSearch, setExerciseSearch] = useState("");
+  // const [intialExercises, setInitalExercises] = useState([])
+  const [exercises, setExercises] = useState([]);
+  // const [videoAudio, setVideoAudio] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      let response = await fetch(
+        "https://raw.githubusercontent.com/stefanofitness/fitnessWebPageData/main/exerciseData.json"
+      );
+      response = await response.json();
+      setExercises(response);
+    })();
+  }, []);
 
   useEffect(() => {
     const checkIfLevelIsOk = (exercise) => {
@@ -19,7 +32,7 @@ const Exercise = () => {
     };
     const checkIfCategoryIsOk = (exercise) => {
       let categoryIsOk = true;
-      if (exerciseCategory === '') {
+      if (exerciseCategory === "") {
         categoryIsOk = true;
       } else {
         categoryIsOk = exercise.category === exerciseCategory;
@@ -28,7 +41,7 @@ const Exercise = () => {
     };
     const checkIfSearchIsOk = (exercise) => {
       let searchIsOk = true;
-      if (exerciseSearch === '') {
+      if (exerciseSearch === "") {
         searchIsOk = true;
       } else {
         searchIsOk = exercise.title
@@ -64,62 +77,65 @@ const Exercise = () => {
     setExerciseSearch(search);
   };
   return (
-    <div className='Exercise'>
-      <div className='selectexercise'>
-        <label className='exerciseLabel' htmlFor='tipoexercise'>
+    <div className="Exercise">
+      <div className="selectexercise">
+        <label className="exerciseLabel" htmlFor="tipoexercise">
           TIPO DI ALLENAMENTO
         </label>
         <select
           onChange={(e) => changeexerciseCategory(e)}
-          name='exerciseSelectCategory'
-          className='exerciseSelectCategory'
+          name="exerciseSelectCategory"
+          className="exerciseSelectCategory"
         >
-          <option value=''>tutti</option>
-          <option value='full body'>full body</option>
-          <option value='schiena'>schiena</option>
-          <option value='petto'>petto</option>
-          <option value='braccia e spalle'>braccia e spalle</option>
-          <option value='gambe e glutei'>gambe e glutei</option>
-          <option value='addominali'>addominali</option>
-          <option value='brucia grassi'>brucia grassi</option>
+          <option value="">tutti</option>
+          <option value="full body">full body</option>
+          <option value="schiena">schiena</option>
+          <option value="petto">petto</option>
+          <option value="braccia e spalle">braccia e spalle</option>
+          <option value="gambe e glutei">gambe e glutei</option>
+          <option value="addominali">addominali</option>
+          <option value="brucia grassi">brucia grassi</option>
         </select>
-        <label className='exerciseLabel' htmlFor='livello'>
+        <label className="exerciseLabel" htmlFor="livello">
           LIVELLO
         </label>
         <select
           onChange={(e) => changeexerciseLevel(e)}
-          name='exerciseSelectLevel'
-          className='exerciseSelectLevel'
+          name="exerciseSelectLevel"
+          className="exerciseSelectLevel"
         >
-          <option value='0'>tutti</option>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
+          <option value="0">tutti</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
         </select>
-        <div className='trainingSearch'>
+        <div className="trainingSearch">
           <label htmlFor="">cerca per nome</label>
-          <input className='searchInput'
+          <input
+            className="searchInput"
             onChange={(e) => changeexerciseSearch(e)}
             value={exerciseSearch}
-            type='text'
-            name='q'
-            aria-label='Search through site content'
+            type="text"
+            name="q"
+            aria-label="Search through site content"
           />
         </div>
       </div>
       {exercises.map((exercise, index) => (
-        <div key={index} className='exerciseWrapper'>
-          <div className='exerciseText'>
-            <h2 className='exerciseTitle'>{exercise.title}</h2>
-            <small className='exerciseCategory'>{exercise.category}</small>
-            <small className='exerciseLevel'>{exercise.level}</small>
+        <div key={index} className="exerciseWrapper">
+          <div className="exerciseText">
+            <h2 className="exerciseTitle">{exercise.title}</h2>
+            <small className="exerciseCategory">{exercise.category}</small>
+            <small className="exerciseLevel">{exercise.level}</small>
           </div>
-          <img
-            className='exerciseImage'
-            src={exercise.image}
-            alt={exercise.imageAlt}
+          <ReactPlayer
+            // muted={false}
+            // playing={true}
+            url={exercise.video}
+            className="exerciseVideo"
           />
-          <p className='exerciseDescription'>{exercise.description}</p>
+
+          <p className="exerciseDescription">{exercise.description}</p>
         </div>
       ))}
     </div>
